@@ -1,6 +1,6 @@
 {
   "name": "uscc-utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.21.0",
   "description": "Utils about uscc | 统一社会信用代码工具方法",
   "keywords": [
