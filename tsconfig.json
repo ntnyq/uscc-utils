@@ -6,6 +6,11 @@
       "DOM",
       "ESNext"
     ],
+    "paths": {
+      "uscc-utils": [
+        "./src/index.ts"
+      ]
+    },
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,

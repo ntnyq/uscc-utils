@@ -2,8 +2,15 @@
   "name": "uscc-utils",
   "version": "0.0.0",
   "packageManager": "pnpm@7.21.0",
-  "description": "__TODO__",
-  "keywords": [],
+  "description": "Utils about uscc | 统一社会信用代码工具方法",
+  "keywords": [
+    "uscc",
+    "parse",
+    "validate",
+    "统一社会信用代码",
+    "解析",
+    "校验"
+  ],
   "homepage": "https://github.com/ntnyq/uscc-utils#readme",
   "bugs": {
     "url": "https://github.com/ntnyq/uscc-utils/issues"
@@ -45,7 +52,7 @@
     "prepare": "husky install",
     "prepublishOnly": "pnpm run build",
     "release": "run-s release:check release:publish",
-    "release:check": "run-s lint typecheck clean build",
+    "release:check": "run-s lint typecheck build",
     "release:publish": "bumpp && pnpm publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit"

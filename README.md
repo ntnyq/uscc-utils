@@ -6,6 +6,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/ntnyq/uscc-utils/badge.svg?branch=main)](https://coveralls.io/github/ntnyq/uscc-utils?branch=main)
 [![LICENSE](https://img.shields.io/github/license/ntnyq/uscc-utils.svg)](https://github.com/ntnyq/uscc-utils/blob/main/LICENSE)
 
+> Utils about uscc(统一社会信用代码工具方法).
+
 ## Install
 
 ```shell
@@ -16,6 +18,14 @@ $ yarn add uscc-utils
 $ pnpm add uscc-utils
 ```
 
+## Usage
+
+```js
+import { validate } from 'uscc-utils'
+
+validate(`123456789012345678`) // true
+```
+
 ## License
 
-[MIT](./LICENSE) License © 2022 [ntnyq](https://github.com/ntnyq)
+[MIT](./LICENSE) License © 2022-PRESENT [ntnyq](https://github.com/ntnyq)

@@ -1,9 +1,16 @@
+import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
     coverage: {
       reporter: [`lcov`, `html`, `text`, `clover`, `json`],
+    },
+  },
+
+  resolve: {
+    alias: {
+      'uscc-utils': fileURLToPath(new URL(`./src/index.ts`, import.meta.url)),
     },
   },
 })
