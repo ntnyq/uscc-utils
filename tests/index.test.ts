@@ -93,7 +93,26 @@ describe(`constants`, () => {
 
 describe(`parse`, () => {
   it(`should pass`, () => {
-    expect(parse()).toBeUndefined()
+    validCodes.forEach(code => {
+      expect(parse(code)).toHaveProperty(`isValid`)
+    })
+  })
+
+  it(`should parse`, () => {
+    expect(parse(`123456789012345678`)).toMatchInlineSnapshot(`
+      {
+        "category": "机构编制",
+        "isValid": true,
+        "type": "事业单位",
+      }
+    `)
+    expect(parse(`91110108551385082Q`)).toMatchInlineSnapshot(`
+      {
+        "category": "工商",
+        "isValid": true,
+        "type": "企业",
+      }
+    `)
   })
 })
 

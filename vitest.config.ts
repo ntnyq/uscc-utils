@@ -4,7 +4,13 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
   test: {
     coverage: {
-      reporter: [`lcov`, `html`, `text`, `clover`, `json`],
+      reporter: [
+        `lcov`,
+        `text`,
+        `html`,
+        `clover`,
+        `json`,
+      ],
     },
   },
 

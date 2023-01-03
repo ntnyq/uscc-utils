@@ -2,8 +2,11 @@
   "name": "uscc-utils",
   "version": "0.0.1",
   "packageManager": "pnpm@7.21.0",
-  "description": "Utils about uscc | 统一社会信用代码工具方法",
+  "description": "Utils about unified social credit code | 统一社会信用代码工具方法",
   "keywords": [
+    "unified social credit code",
+    "unified social credit identifier",
+    "usci",
     "uscc",
     "parse",
     "validate",
@@ -59,16 +62,16 @@
   },
   "devDependencies": {
     "@ntnyq/eslint-config-typescript": "^1.2.1",
-    "@vitest/coverage-c8": "^0.26.2",
+    "@vitest/coverage-c8": "^0.26.3",
     "bumpp": "^8.2.1",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "husky": "^8.0.2",
     "nano-staged": "^0.8.0",
     "npm-run-all": "^4.1.5",
     "pnpm": "^7.21.0",
     "typescript": "^4.9.4",
     "unbuild": "^1.0.2",
-    "vitest": "^0.26.2"
+    "vitest": "^0.26.3"
   },
   "nano-staged": {
     "*.{js,ts,json,md,yml,yaml}": "eslint --fix"
