@@ -1,22 +1,53 @@
 import { describe, expect, it } from 'vitest'
 import { parse } from 'uscc-utils'
 import {
+  checksumErrorCode,
   code1,
   code2,
   code3,
   code4,
   code5,
+  invalidCodes,
   validCodes,
 } from './fixtures'
 
+const UNKNOWN = `Unknown`
+
 describe(`parse`, () => {
   it(`should pass`, () => {
-    validCodes.forEach(code => {
-      expect(parse(code)).toHaveProperty(`isValid`)
+    [
+      ...validCodes,
+      ...invalidCodes,
+    ].forEach(code => {
+      expect(Object.keys(parse(code))).toEqual([`isValid`, `category`, `type`])
     })
   })
 
-  it(`should parse`, () => {
+  it(`should parse as expected`, () => {
+    expect(parse(``)).toMatchInlineSnapshot(`
+      {
+        "category": "未知",
+        "isValid": false,
+        "type": "未知",
+      }
+    `)
+    expect(parse(checksumErrorCode)).toMatchInlineSnapshot(`
+      {
+        "category": "未知",
+        "isValid": false,
+        "type": "未知",
+      }
+    `)
+    expect(parse(checksumErrorCode, {
+      unknownCategory: UNKNOWN,
+      unknownType: UNKNOWN,
+    })).toMatchInlineSnapshot(`
+      {
+        "category": "Unknown",
+        "isValid": false,
+        "type": "Unknown",
+      }
+    `)
     expect(parse(code1)).toMatchInlineSnapshot(`
       {
         "category": "机构编制",

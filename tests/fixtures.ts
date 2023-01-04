@@ -35,11 +35,12 @@ export const patternErrorCodes = [
   `FOOBARFOOBARFOOBAR`,
 ]
 
-export const checksumErrorCodes = [
-  `91110108551385082F`,
-]
+/**
+ * checksum
+ */
+export const checksumErrorCode = `91110108551385082F`
 
 export const invalidCodes = [
   ...patternErrorCodes,
-  ...checksumErrorCodes,
+  checksumErrorCode,
 ]
