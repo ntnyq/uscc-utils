@@ -13,8 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
       - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          cache: pnpm
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run lint
@@ -29,10 +31,11 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - uses: pnpm/action-setup@v2
+          cache: pnpm
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
@@ -43,8 +46,10 @@ jobs:
     needs: [check, test]
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
       - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          cache: pnpm
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run coverage
