@@ -10,11 +10,16 @@ export const USCC_PATTERN = /[1-9ANY][123459](100000|110000|11010[1-9]|1101[1-9]
  */
 export const USCC_LENGTH = 18
 
+export const USCC_MOD = 31
+
 /**
  * 未知
  */
 export const USCC_UNKNOWN = `未知`
 
+/**
+ * 统一社会信用代码字符集
+ */
 export const USCC_CHARS = [
   `0`,
   `1`,
@@ -49,6 +54,9 @@ export const USCC_CHARS = [
   `Y`,
 ]
 
+/**
+ * 统一社会信用代码加权因子
+ */
 export const USCC_WEIGHTS = [
   1,
   3,

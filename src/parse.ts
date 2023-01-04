@@ -2,18 +2,17 @@ import {
   USCC_CATEGORY_MAP,
   USCC_UNKNOWN,
 } from './constants'
+import type {
+  ParseOptions,
+  ParseResult,
+} from './type'
 import { validate } from './validate'
 
-export interface ParseResult {
-  isValid: boolean
-  category: string
-  type: string
-}
-
-export function parse (code: string, {
-  unknownCategory = USCC_UNKNOWN,
-  unknownType = USCC_UNKNOWN,
-} = {}): ParseResult {
+export function parse (code: string, options: ParseOptions = {}): ParseResult {
+  const {
+    unknownCategory = USCC_UNKNOWN,
+    unknownType = USCC_UNKNOWN,
+  } = options
   const isValid = validate(code)
 
   if (!isValid) {
