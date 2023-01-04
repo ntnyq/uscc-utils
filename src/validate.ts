@@ -1,6 +1,7 @@
 import {
   USCC_CHARS,
   USCC_LENGTH,
+  USCC_MOD,
   USCC_PATTERN,
   USCC_WEIGHTS,
 } from './constants'
@@ -22,7 +23,7 @@ export function validate (code: string) {
     const weight = USCC_WEIGHTS[i]
     checksum += num * weight
   }
-  checksum = 31 - (checksum % 31)
+  checksum = USCC_MOD - (checksum % USCC_MOD)
 
-  return USCC_CHARS[checksum] === code.charAt(17)
+  return USCC_CHARS[checksum % USCC_MOD] === code.charAt(17)
 }
