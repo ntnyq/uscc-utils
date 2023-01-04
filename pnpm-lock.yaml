@@ -8,10 +8,10 @@ importers:
       '@vitest/coverage-c8': ^0.26.3
       bumpp: ^8.2.1
       eslint: ^8.31.0
-      husky: ^8.0.2
+      husky: ^8.0.3
       nano-staged: ^0.8.0
       npm-run-all: ^4.1.5
-      pnpm: ^7.21.0
+      pnpm: ^7.22.0
       typescript: ^4.9.4
       unbuild: ^1.0.2
       vitest: ^0.26.3
@@ -20,10 +20,10 @@ importers:
       '@vitest/coverage-c8': 0.26.3
       bumpp: 8.2.1
       eslint: 8.31.0
-      husky: 8.0.2
+      husky: 8.0.3
       nano-staged: 0.8.0
       npm-run-all: 4.1.5
-      pnpm: 7.21.0
+      pnpm: 7.22.0
       typescript: 4.9.4
       unbuild: 1.0.2
       vitest: 0.26.3
@@ -2280,8 +2280,8 @@ packages:
       entities: 4.4.0
     dev: true
 
-  /husky/8.0.2:
-    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -3057,8 +3057,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.21.0:
-    resolution: {integrity: sha512-zDsRciscnXmp8AVD0u9eSoJrGfXywepuwMmFstsd+Vfl/wDZUxgaSaZ/6Nkx3bBftC+oBpWFkAGBRyjy58jvZg==}
+  /pnpm/7.22.0:
+    resolution: {integrity: sha512-dkhne1O1ktNz/Cn/GZU5wnjhP/aNEfmJGW5UdILyDnptgw84jauOf2Mk5jTe3gp4OZWZN1szcBrjyOZ7Uxxilw==}
     engines: {node: '>=14.6'}
     hasBin: true
     dev: true
