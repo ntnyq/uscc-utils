@@ -10,6 +10,12 @@ import {
  * 校验统一社会信用代码
  * @param code 统一社会信用代码
  * @returns 是否有效
+ *
+ * @example
+ * ```
+ * import { validate } from 'uscc-utils'
+ * validate(`91110108551385082Q`)  // true
+ * ```
  */
 export function validate (code: string) {
   if (code.length !== USCC_LENGTH) return false

@@ -8,6 +8,18 @@ import type {
 } from './type'
 import { validate } from './validate'
 
+/**
+ * parse uscc
+ * @param code code to parse
+ * @param options parse options
+ * @returns parsed result `ParseResult`
+ *
+ * @example
+ * ```
+ * import { parse } from 'uscc-utils'
+ * parse(`91110108551385082Q`) // { isValid: true, category: '工商', type: '企业' }
+ * ```
+ */
 export function parse (code: string, options: ParseOptions = {}): ParseResult {
   const {
     unknownCategory = USCC_UNKNOWN,
