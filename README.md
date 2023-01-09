@@ -3,7 +3,7 @@
 [![CI](https://github.com/ntnyq/uscc-utils/workflows/CI/badge.svg)](https://github.com/ntnyq/uscc-utils/actions)
 [![NPM VERSION](https://img.shields.io/npm/v/uscc-utils.svg)](https://www.npmjs.com/package/uscc-utils)
 [![NPM DOWNLOADS](https://img.shields.io/npm/dy/uscc-utils.svg)](https://www.npmjs.com/package/uscc-utils)
-[![Coverage Status](https://coveralls.io/repos/github/ntnyq/uscc-utils/badge.svg?branch=main)](https://coveralls.io/github/ntnyq/uscc-utils?branch=main)
+[![codecov](https://codecov.io/github/ntnyq/uscc-utils/branch/main/graph/badge.svg?token=2U07S1P2F2)](https://codecov.io/github/ntnyq/uscc-utils)
 [![LICENSE](https://img.shields.io/github/license/ntnyq/uscc-utils.svg)](https://github.com/ntnyq/uscc-utils/blob/main/LICENSE)
 
 > Utils about unified social credit code(统一社会信用代码工具方法).
