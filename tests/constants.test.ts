@@ -13,20 +13,20 @@ import {
   validCodes,
 } from './fixtures'
 
-describe(`constants`, () => {
-  it(`should match`, () => {
+describe('constants', () => {
+  it('should match', () => {
     validCodes.forEach(code => {
       expect(code).toMatch(USCC_PATTERN)
     })
   })
 
-  it(`should not match`, () => {
+  it('should not match', () => {
     patternErrorCodes.forEach(code => {
       expect(code).not.toMatch(USCC_PATTERN)
     })
   })
 
-  it(`snapshot`, () => {
+  it('snapshot', () => {
     expect(USCC_MOD).toMatchInlineSnapshot('31')
     expect(USCC_LENGTH).toMatchInlineSnapshot('18')
     expect(USCC_UNKNOWN).toMatchInlineSnapshot('"未知"')

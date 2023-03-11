@@ -11,20 +11,20 @@ import {
   validCodes,
 } from './fixtures'
 
-const UNKNOWN = `Unknown`
+const UNKNOWN = 'Unknown'
 
-describe(`parse`, () => {
-  it(`should pass`, () => {
+describe('parse', () => {
+  it('should pass', () => {
     [
       ...validCodes,
       ...invalidCodes,
     ].forEach(code => {
-      expect(Object.keys(parse(code))).toEqual([`isValid`, `category`, `type`])
+      expect(Object.keys(parse(code))).toEqual(['isValid', 'category', 'type'])
     })
   })
 
-  it(`should parse as expected`, () => {
-    expect(parse(``)).toMatchInlineSnapshot(`
+  it('should parse as expected', () => {
+    expect(parse('')).toMatchInlineSnapshot(`
       {
         "category": "未知",
         "isValid": false,

@@ -5,14 +5,14 @@ import {
   validCodes,
 } from './fixtures'
 
-describe(`validate`, () => {
-  it(`should return true`, () => {
+describe('validate', () => {
+  it('should return true', () => {
     validCodes.forEach(code => {
       expect(validate(code)).toBeTruthy()
     })
   })
 
-  it(`should return false`, () => {
+  it('should return false', () => {
     invalidCodes.forEach(code => {
       expect(validate(code)).toBeFalsy()
     })

@@ -20,7 +20,7 @@ import { validate } from './validate'
  * parse(`91110108551385082Q`) // { isValid: true, category: '工商', type: '企业' }
  * ```
  */
-export function parse (code: string, options: ParseOptions = {}): ParseResult {
+export function parse(code: string, options: ParseOptions = {}): ParseResult {
   const {
     unknownCategory = USCC_UNKNOWN,
     unknownType = USCC_UNKNOWN,

@@ -5,18 +5,18 @@ export default defineConfig({
   test: {
     coverage: {
       reporter: [
-        `lcov`,
-        `text`,
-        `html`,
-        `clover`,
-        `json`,
+        'lcov',
+        'text',
+        'html',
+        'clover',
+        'json',
       ],
     },
   },
 
   resolve: {
     alias: {
-      'uscc-utils': fileURLToPath(new URL(`./src/index.ts`, import.meta.url)),
+      'uscc-utils': fileURLToPath(new URL('./src/index.ts', import.meta.url)),
     },
   },
 })

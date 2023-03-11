@@ -17,7 +17,7 @@ import {
  * validate(`91110108551385082Q`)  // true
  * ```
  */
-export function validate (code: string) {
+export function validate(code: string) {
   if (code.length !== USCC_LENGTH) return false
   if (!USCC_PATTERN.test(code)) return false
 
