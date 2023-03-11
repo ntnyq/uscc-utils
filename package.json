@@ -58,7 +58,7 @@
     "release:check": "run-s lint typecheck build",
     "release:publish": "bumpp && pnpm publish",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "vitest typecheck"
   },
   "devDependencies": {
     "@ntnyq/eslint-config": "^1.4.2",

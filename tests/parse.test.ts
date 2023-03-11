@@ -14,7 +14,7 @@ import {
 const UNKNOWN = 'Unknown'
 
 describe('parse', () => {
-  it('should pass', () => {
+  it('should return type match', () => {
     [
       ...validCodes,
       ...invalidCodes,

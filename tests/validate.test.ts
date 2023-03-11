@@ -6,13 +6,13 @@ import {
 } from './fixtures'
 
 describe('validate', () => {
-  it('should return true', () => {
+  it('all codes are valid', () => {
     validCodes.forEach(code => {
       expect(validate(code)).toBeTruthy()
     })
   })
 
-  it('should return false', () => {
+  it('all codes are invalid', () => {
     invalidCodes.forEach(code => {
       expect(validate(code)).toBeFalsy()
     })
