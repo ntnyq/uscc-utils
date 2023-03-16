@@ -1,4 +1,3 @@
-
 export const code1 = '123456789012345678'
 
 /**
@@ -21,26 +20,13 @@ export const code4 = '52410000663412719U'
  */
 export const code5 = '91110108551385082Q'
 
-export const validCodes = [
-  code1,
-  code2,
-  code3,
-  code4,
-  code5,
-]
+export const validCodes = [code1, code2, code3, code4, code5]
 
-export const patternErrorCodes = [
-  '',
-  '123',
-  'FOOBARFOOBARFOOBAR',
-]
+export const patternErrorCodes = ['', '123', 'FOOBARFOOBARFOOBAR']
 
 /**
  * checksum
  */
 export const checksumErrorCode = '91110108551385082F'
 
-export const invalidCodes = [
-  ...patternErrorCodes,
-  checksumErrorCode,
-]
+export const invalidCodes = [...patternErrorCodes, checksumErrorCode]

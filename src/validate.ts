@@ -1,10 +1,4 @@
-import {
-  USCC_CHARS,
-  USCC_LENGTH,
-  USCC_MOD,
-  USCC_PATTERN,
-  USCC_WEIGHTS,
-} from './constants'
+import { USCC_CHARS, USCC_LENGTH, USCC_MOD, USCC_PATTERN, USCC_WEIGHTS } from './constants'
 
 /**
  * 校验统一社会信用代码

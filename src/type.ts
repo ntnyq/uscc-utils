@@ -1,4 +1,3 @@
-
 export interface ParseResult {
   isValid: boolean
   category: string

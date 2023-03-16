@@ -8,10 +8,7 @@ import {
   USCC_UNKNOWN,
   USCC_WEIGHTS,
 } from 'uscc-utils'
-import {
-  patternErrorCodes,
-  validCodes,
-} from './fixtures'
+import { patternErrorCodes, validCodes } from './fixtures'
 
 describe('constants', () => {
   it('should match', () => {

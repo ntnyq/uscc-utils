@@ -15,10 +15,7 @@ const UNKNOWN = 'Unknown'
 
 describe('parse', () => {
   it('should return type match', () => {
-    [
-      ...validCodes,
-      ...invalidCodes,
-    ].forEach(code => {
+    ;[...validCodes, ...invalidCodes].forEach(code => {
       expect(Object.keys(parse(code))).toEqual(['isValid', 'category', 'type'])
     })
   })
@@ -38,10 +35,12 @@ describe('parse', () => {
         "type": "未知",
       }
     `)
-    expect(parse(checksumErrorCode, {
-      unknownCategory: UNKNOWN,
-      unknownType: UNKNOWN,
-    })).toMatchInlineSnapshot(`
+    expect(
+      parse(checksumErrorCode, {
+        unknownCategory: UNKNOWN,
+        unknownType: UNKNOWN,
+      }),
+    ).toMatchInlineSnapshot(`
       {
         "category": "Unknown",
         "isValid": false,
