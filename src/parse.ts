@@ -1,6 +1,6 @@
 import { USCC_CATEGORY_MAP, USCC_UNKNOWN } from './constants'
-import type { ParseOptions, ParseResult } from './type'
-import { validate } from './validate'
+import type { ParseOptions, ParseResult } from './types'
+import { validateUSCC } from './validate'
 
 /**
  * parse uscc
@@ -10,13 +10,13 @@ import { validate } from './validate'
  *
  * @example
  * ```
- * import { parse } from 'uscc-utils'
- * parse(`91110108551385082Q`) // { isValid: true, category: '工商', type: '企业' }
+ * import { parseUSCC } from 'uscc-utils'
+ * parseUSCC(`91110108551385082Q`) // { isValid: true, category: '工商', type: '企业' }
  * ```
  */
-export function parse(code: string, options: ParseOptions = {}): ParseResult {
+export function parseUSCC(code: string, options: ParseOptions = {}): ParseResult {
   const { unknownCategory = USCC_UNKNOWN, unknownType = USCC_UNKNOWN } = options
-  const isValid = validate(code)
+  const isValid = validateUSCC(code)
 
   if (!isValid) {
     return {
@@ -36,3 +36,8 @@ export function parse(code: string, options: ParseOptions = {}): ParseResult {
     type,
   }
 }
+
+/**
+ * @deprecated renamed to `parseUSCC` for a semantic name
+ */
+export const parse = parseUSCC

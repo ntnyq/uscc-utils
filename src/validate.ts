@@ -7,11 +7,11 @@ import { USCC_CHARS, USCC_LENGTH, USCC_MOD, USCC_PATTERN, USCC_WEIGHTS } from '.
  *
  * @example
  * ```
- * import { validate } from 'uscc-utils'
- * validate(`91110108551385082Q`)  // true
+ * import { validateUSCC } from 'uscc-utils'
+ * validateUSCC(`91110108551385082Q`)  // true
  * ```
  */
-export function validate(code: string) {
+export function validateUSCC(code: string) {
   if (code.length !== USCC_LENGTH) return false
   if (!USCC_PATTERN.test(code)) return false
 
@@ -27,3 +27,8 @@ export function validate(code: string) {
 
   return USCC_CHARS[checksum % USCC_MOD] === code.charAt(17)
 }
+
+/**
+ * @deprecated renamed to `validateUSCC` for a semantic name
+ */
+export const validate = validateUSCC

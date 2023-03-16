@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parse } from 'uscc-utils'
+import { parseUSCC } from 'uscc-utils'
 import {
   checksumErrorCode,
   code1,
@@ -13,22 +13,22 @@ import {
 
 const UNKNOWN = 'Unknown'
 
-describe('parse', () => {
+describe('parseUSCC', () => {
   it('should return type match', () => {
     ;[...validCodes, ...invalidCodes].forEach(code => {
-      expect(Object.keys(parse(code))).toEqual(['isValid', 'category', 'type'])
+      expect(Object.keys(parseUSCC(code))).toEqual(['isValid', 'category', 'type'])
     })
   })
 
   it('should parse as expected', () => {
-    expect(parse('')).toMatchInlineSnapshot(`
+    expect(parseUSCC('')).toMatchInlineSnapshot(`
       {
         "category": "未知",
         "isValid": false,
         "type": "未知",
       }
     `)
-    expect(parse(checksumErrorCode)).toMatchInlineSnapshot(`
+    expect(parseUSCC(checksumErrorCode)).toMatchInlineSnapshot(`
       {
         "category": "未知",
         "isValid": false,
@@ -36,7 +36,7 @@ describe('parse', () => {
       }
     `)
     expect(
-      parse(checksumErrorCode, {
+      parseUSCC(checksumErrorCode, {
         unknownCategory: UNKNOWN,
         unknownType: UNKNOWN,
       }),
@@ -47,35 +47,35 @@ describe('parse', () => {
         "type": "Unknown",
       }
     `)
-    expect(parse(code1)).toMatchInlineSnapshot(`
+    expect(parseUSCC(code1)).toMatchInlineSnapshot(`
       {
         "category": "机构编制",
         "isValid": true,
         "type": "事业单位",
       }
     `)
-    expect(parse(code2)).toMatchInlineSnapshot(`
+    expect(parseUSCC(code2)).toMatchInlineSnapshot(`
       {
         "category": "工商",
         "isValid": true,
         "type": "企业",
       }
     `)
-    expect(parse(code3)).toMatchInlineSnapshot(`
+    expect(parseUSCC(code3)).toMatchInlineSnapshot(`
       {
         "category": "民政",
         "isValid": true,
         "type": "基金会",
       }
     `)
-    expect(parse(code4)).toMatchInlineSnapshot(`
+    expect(parseUSCC(code4)).toMatchInlineSnapshot(`
       {
         "category": "民政",
         "isValid": true,
         "type": "民办非企业单位",
       }
     `)
-    expect(parse(code5)).toMatchInlineSnapshot(`
+    expect(parseUSCC(code5)).toMatchInlineSnapshot(`
       {
         "category": "工商",
         "isValid": true,

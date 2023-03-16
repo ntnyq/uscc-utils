@@ -21,13 +21,13 @@ $ pnpm add uscc-utils
 ## Usage
 
 ```js
-import { parse, validate } from 'uscc-utils'
+import { parseUSCC, validateUSCC } from 'uscc-utils'
 
 const code = '91110108551385082Q' // 小米科技有限责任公司
 
-validate(code) // true
+validateUSCC(code) // true
 
-parse(code) // { isValid: true, category: '工商', type: '企业' }
+parseUSCC(code) // { isValid: true, category: '工商', type: '企业' }
 ```
 
 ## Credits
