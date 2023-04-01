@@ -1,6 +1,6 @@
 import { USCC_CATEGORY_MAP, USCC_UNKNOWN } from './constants'
-import type { ParseOptions, ParseResult } from './types'
 import { validateUSCC } from './validate'
+import type { ParseOptions, ParseResult } from './types'
 
 /**
  * parse uscc
