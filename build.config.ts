@@ -7,8 +7,7 @@ export default defineBuildConfig({
   rollup: {
     emitCJS: true,
     esbuild: {
-      // TODO: wait https://github.com/unjs/unbuild/pull/190
-      // charset: `utf8`,
+      charset: 'utf8',
     },
   },
 })
