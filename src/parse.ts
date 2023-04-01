@@ -11,7 +11,7 @@ import type { ParseOptions, ParseResult } from './types'
  * @example
  * ```
  * import { parseUSCC } from 'uscc-utils'
- * parseUSCC(`91110108551385082Q`) // { isValid: true, category: '工商', type: '企业' }
+ * parseUSCC('91110108551385082Q') // { isValid: true, category: '工商', type: '企业' }
  * ```
  */
 export function parseUSCC(code: string, options: ParseOptions = {}): ParseResult {

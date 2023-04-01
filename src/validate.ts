@@ -8,7 +8,7 @@ import { USCC_CHARS, USCC_LENGTH, USCC_MOD, USCC_PATTERN, USCC_WEIGHTS } from '.
  * @example
  * ```
  * import { validateUSCC } from 'uscc-utils'
- * validateUSCC(`91110108551385082Q`)  // true
+ * validateUSCC('91110108551385082Q')  // true
  * ```
  */
 export function validateUSCC(code: string) {
