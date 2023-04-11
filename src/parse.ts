@@ -36,8 +36,3 @@ export function parseUSCC(code: string, options: ParseOptions = {}): ParseResult
     type,
   }
 }
-
-/**
- * @deprecated renamed to `parseUSCC` for a semantic name
- */
-export const parse = parseUSCC

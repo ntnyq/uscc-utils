@@ -27,8 +27,3 @@ export function validateUSCC(code: string) {
 
   return USCC_CHARS[checksum % USCC_MOD] === code.charAt(17)
 }
-
-/**
- * @deprecated renamed to `validateUSCC` for a semantic name
- */
-export const validate = validateUSCC
