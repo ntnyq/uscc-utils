@@ -1,13 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import {
-  USCC_CATEGORY_MAP,
-  USCC_CHARS,
-  USCC_LENGTH,
-  USCC_MOD,
-  USCC_PATTERN,
-  USCC_UNKNOWN,
-  USCC_WEIGHTS,
-} from 'uscc-utils'
+import { USCC_CATEGORY_MAP, USCC_PATTERN } from 'uscc-utils'
 import { patternErrorCodes, validCodes } from './fixtures'
 
 describe('constants', () => {
@@ -24,65 +16,6 @@ describe('constants', () => {
   })
 
   it('snapshot', () => {
-    expect(USCC_MOD).toMatchInlineSnapshot('31')
-    expect(USCC_LENGTH).toMatchInlineSnapshot('18')
-    expect(USCC_UNKNOWN).toMatchInlineSnapshot('"未知"')
-    expect(USCC_CHARS).toMatchInlineSnapshot(`
-      [
-        "0",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F",
-        "G",
-        "H",
-        "J",
-        "K",
-        "L",
-        "M",
-        "N",
-        "P",
-        "Q",
-        "R",
-        "T",
-        "U",
-        "W",
-        "X",
-        "Y",
-      ]
-    `)
-    expect(USCC_WEIGHTS).toMatchInlineSnapshot(`
-      [
-        1,
-        3,
-        9,
-        27,
-        19,
-        26,
-        16,
-        17,
-        20,
-        29,
-        25,
-        13,
-        8,
-        24,
-        10,
-        30,
-        28,
-      ]
-    `)
     expect(USCC_CATEGORY_MAP).toMatchInlineSnapshot(`
       {
         "1": {

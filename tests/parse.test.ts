@@ -11,7 +11,7 @@ import {
   validCodes,
 } from './fixtures'
 
-const UNKNOWN = 'Unknown'
+const UNKNOWN = 'unknown'
 
 describe('parseUSCC', () => {
   it('should return type match', () => {
@@ -23,16 +23,16 @@ describe('parseUSCC', () => {
   it('should parse as expected', () => {
     expect(parseUSCC('')).toMatchInlineSnapshot(`
       {
-        "category": "未知",
+        "category": "",
         "isValid": false,
-        "type": "未知",
+        "type": "",
       }
     `)
     expect(parseUSCC(checksumErrorCode)).toMatchInlineSnapshot(`
       {
-        "category": "未知",
+        "category": "",
         "isValid": false,
-        "type": "未知",
+        "type": "",
       }
     `)
     expect(
@@ -42,9 +42,9 @@ describe('parseUSCC', () => {
       }),
     ).toMatchInlineSnapshot(`
       {
-        "category": "Unknown",
+        "category": "unknown",
         "isValid": false,
-        "type": "Unknown",
+        "type": "unknown",
       }
     `)
     expect(parseUSCC(code1)).toMatchInlineSnapshot(`

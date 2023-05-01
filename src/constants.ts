@@ -8,60 +8,6 @@ export const USCC_PATTERN =
   /[1-9ANY][1-59](100000|110000|11010[1-9]|1101[1-9]\d|110[2-9]\d{2}|11[1-9]\d{3}|[2-5]\d{5}|6[0-4]\d{4}|65[0-8]\d{3}|6590\d{2}|990000)[\dA-Z]{8}[\dX][\dA-HJ-NP-RTUW-Y]/
 
 /**
- * 统一社会信用代码长度
- */
-export const USCC_LENGTH = 18
-
-export const USCC_MOD = 31
-
-/**
- * 未知
- */
-export const USCC_UNKNOWN = '未知'
-
-/**
- * 统一社会信用代码字符集
- */
-export const USCC_CHARS = [
-  '0',
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'P',
-  'Q',
-  'R',
-  'T',
-  'U',
-  'W',
-  'X',
-  'Y',
-]
-
-/**
- * 统一社会信用代码加权因子
- */
-export const USCC_WEIGHTS = [1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30, 28]
-
-/**
  * 登记管理部门代码
  */
 export const USCC_CATEGORY_MAP: Record<

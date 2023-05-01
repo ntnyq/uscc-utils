@@ -1,4 +1,4 @@
-import { USCC_CATEGORY_MAP, USCC_UNKNOWN } from './constants'
+import { USCC_CATEGORY_MAP } from './constants'
 import { validateUSCC } from './validate'
 import type { ParseOptions, ParseResult } from './types'
 
@@ -15,7 +15,7 @@ import type { ParseOptions, ParseResult } from './types'
  * ```
  */
 export function parseUSCC(code: string, options: ParseOptions = {}): ParseResult {
-  const { unknownCategory = USCC_UNKNOWN, unknownType = USCC_UNKNOWN } = options
+  const { unknownCategory = '', unknownType = '' } = options
   const isValid = validateUSCC(code)
 
   if (!isValid) {
