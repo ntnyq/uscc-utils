@@ -1,11 +1,11 @@
 /**
  * 正则 统一社会信用代码
  * @see https://www.wikidata.org/wiki/Property:P6795
- * @link https://regexper.com/#%2F%5B1-9ANY%5D%5B123459%5D%28100000%7C110000%7C11010%5B1-9%5D%7C1101%5B1-9%5D%5Cd%7C110%5B2-9%5D%5Cd%7B2%7D%7C11%5B1-9%5D%5Cd%7B3%7D%7C%5B2-5%5D%5Cd%7B5%7D%7C6%5B0-4%5D%5Cd%7B4%7D%7C65%5B0-8%5D%5Cd%7B3%7D%7C6590%5Cd%7B2%7D%7C990000%29%5B0-9A-Z%5D%7B8%7D%5B0-9X%5D%5B0-9A-HJ-NPQRTUWXY%5D%2F
+ * @link https://regexper.com/#%2F%5B1-9ANY%5D%5B1-59%5D%5Cd%7B6%7D%5B%5CdA-Z%5D%7B8%7D%5B%5CdX%5D%5B%5CdA-HJ-NP-RTUW-Y%5D%2F
  */
 export const USCC_PATTERN =
   // cSpell: disable-next-line
-  /[1-9ANY][1-59](100000|110000|11010[1-9]|1101[1-9]\d|110[2-9]\d{2}|11[1-9]\d{3}|[2-5]\d{5}|6[0-4]\d{4}|65[0-8]\d{3}|6590\d{2}|990000)[\dA-Z]{8}[\dX][\dA-HJ-NP-RTUW-Y]/
+  /[1-9ANY][1-59]\d{6}[\dA-Z]{8}[\dX][\dA-HJ-NP-RTUW-Y]/
 
 /**
  * 登记管理部门代码

@@ -20,7 +20,12 @@ export const code4 = '52410000663412719U'
  */
 export const code5 = '91110108551385082Q'
 
-export const validCodes = [code1, code2, code3, code4, code5]
+/**
+ * 岚县
+ */
+export const code6 = '92141127MA0KD1Y64A'
+
+export const validCodes = [code1, code2, code3, code4, code5, code6]
 
 export const patternErrorCodes = ['', '123', 'FOOBARFOOBARFOOBAR']
 
