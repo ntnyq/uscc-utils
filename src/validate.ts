@@ -4,10 +4,13 @@ import { USCC_PATTERN } from './constants'
  * 统一社会信用代码长度
  */
 const USCC_LENGTH = 18
+
 /**
  * 统一社会信用代码 取模值
  */
+
 const USCC_MOD = 31
+
 /**
  * 统一社会信用代码字符集
  */
@@ -44,6 +47,7 @@ const USCC_CHARS = [
   'X',
   'Y',
 ]
+
 /**
  * 统一社会信用代码加权因子
  */
@@ -64,15 +68,11 @@ export function validateUSCC(code: string) {
   if (code.length !== USCC_LENGTH) return false
   if (!USCC_PATTERN.test(code)) return false
 
-  let checksum = 0
+  const sum = code
+    .split('')
+    .filter((_, idx) => idx < 17)
+    .reduce((acc, char, idx) => acc + USCC_CHARS.indexOf(char) * USCC_WEIGHTS[idx], 0)
 
-  for (let i = 0; i < 17; i++) {
-    const char = code.charAt(i)
-    const num = USCC_CHARS.indexOf(char)
-    const weight = USCC_WEIGHTS[i]
-    checksum += num * weight
-  }
-  checksum = USCC_MOD - (checksum % USCC_MOD)
-
-  return USCC_CHARS[checksum % USCC_MOD] === code.charAt(17)
+  // sum % USCC_MOD could be 0
+  return USCC_CHARS[(USCC_MOD - (sum % USCC_MOD)) % USCC_MOD] === code.charAt(17)
 }
