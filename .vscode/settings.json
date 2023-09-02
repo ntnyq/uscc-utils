@@ -1,5 +1,10 @@
 {
   "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.options": {
+    "overrideConfigFile": "./eslint.config.mjs"
+  },
   "eslint.validate": [
     "vue",
     "yaml",
