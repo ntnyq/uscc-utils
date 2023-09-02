@@ -1,6 +1,6 @@
 {
   "name": "uscc-utils",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "packageManager": "pnpm@8.7.1",
   "description": "Utils about unified social credit code | 统一社会信用代码工具方法",
   "keywords": [
