@@ -1,9 +1,13 @@
 .DS_Store
 node_modules
-.cache
 *.log
 *.local
-coverage
-lib-cov
+.cache
+
 dist
+coverage
+
+lib-cov
 temp
+
+*.tsbuildinfo
