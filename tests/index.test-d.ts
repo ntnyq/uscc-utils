@@ -1,5 +1,5 @@
-import { assertType, describe, expectTypeOf, it } from 'vitest'
 import { parseUSCC, validateUSCC } from 'uscc-utils'
+import { assertType, describe, expectTypeOf, it } from 'vitest'
 import type { ParseOptions, ParseResult } from 'uscc-utils'
 
 describe('typecheck', () => {

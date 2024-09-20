@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest'
 import { USCC_CATEGORY_MAP, USCC_PATTERN } from 'uscc-utils'
+import { describe, expect, it } from 'vitest'
 import { patternErrorCodes, validCodes } from './fixtures'
 
 describe('constants', () => {

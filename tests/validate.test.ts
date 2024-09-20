@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest'
 import { validateUSCC } from 'uscc-utils'
+import { describe, expect, it } from 'vitest'
 import { invalidCodes, validCodes } from './fixtures'
 
 describe('validateUSCC', () => {
