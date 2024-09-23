@@ -59,7 +59,7 @@
     "typecheck": "vitest --typecheck"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.0.0-beta.15",
+    "@ntnyq/eslint-config": "^3.0.0-beta.17",
     "@ntnyq/prettier-config": "^1.21.3",
     "@types/node": "^22.5.5",
     "@vitest/coverage-v8": "^2.1.1",
