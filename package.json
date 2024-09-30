@@ -61,10 +61,10 @@
   "devDependencies": {
     "@ntnyq/eslint-config": "^3.0.0-beta.17",
     "@ntnyq/prettier-config": "^1.21.3",
-    "@types/node": "^22.5.5",
+    "@types/node": "^22.7.4",
     "@vitest/coverage-v8": "^2.1.1",
-    "bumpp": "^9.5.2",
-    "eslint": "^9.11.0",
+    "bumpp": "^9.6.1",
+    "eslint": "^9.11.1",
     "husky": "^9.1.6",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^6.2.3",
@@ -72,7 +72,7 @@
     "prettier": "^3.3.3",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2",
-    "unbuild": "^3.0.0-rc.7",
+    "unbuild": "^3.0.0-rc.8",
     "vitest": "^2.1.1"
   },
   "prettier": "@ntnyq/prettier-config",
