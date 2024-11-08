@@ -1,5 +1,5 @@
-import { parseUSCC } from 'uscc-utils'
 import { describe, expect, it } from 'vitest'
+import { parseUSCC } from '../src'
 import {
   checksumErrorCode,
   code1,

@@ -64,7 +64,7 @@ const USCC_WEIGHTS = [1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30
  * validateUSCC('91110108551385082Q')  // true
  * ```
  */
-export function validateUSCC(code: string) {
+export function validateUSCC(code: string): boolean {
   if (code.length !== USCC_LENGTH) return false
   if (!USCC_PATTERN.test(code)) return false
 
