@@ -2,18 +2,18 @@
   "name": "uscc-utils",
   "type": "module",
   "version": "0.6.1",
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.15.0",
   "description": "Utils about unified social credit code | 统一社会信用代码工具方法",
   "keywords": [
+    "parse",
     "unified social credit code",
     "unified social credit identifier",
-    "usci",
     "uscc",
-    "parse",
+    "usci",
     "validate",
+    "校验",
     "统一社会信用代码",
-    "解析",
-    "校验"
+    "解析"
   ],
   "license": "MIT",
   "author": {
@@ -59,23 +59,21 @@
     "typecheck": "vitest --typecheck"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.3.1",
+    "@ntnyq/eslint-config": "^3.9.0",
     "@ntnyq/prettier-config": "^1.22.0",
-    "@types/node": "^22.9.3",
-    "@vitest/coverage-v8": "^2.1.5",
+    "@types/node": "^22.10.1",
+    "@vitest/coverage-v8": "^2.1.8",
     "bumpp": "^9.8.1",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^7.0.1",
-    "pnpm": "^9.14.2",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "unbuild": "^3.0.0-rc.11",
-    "vitest": "^2.1.5"
+    "vitest": "^2.1.8"
   },
-  "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
     "*.{js,ts,cjs,mjs,json,md,yml,yaml}": "eslint --fix"
   }

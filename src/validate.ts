@@ -55,7 +55,7 @@ const USCC_WEIGHTS = [1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30
 
 /**
  * 校验统一社会信用代码
- * @param code 统一社会信用代码
+ * @param code - 统一社会信用代码
  * @returns 是否有效
  *
  * @example

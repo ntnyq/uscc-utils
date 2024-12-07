@@ -1,7 +1,7 @@
 /**
  * 正则 统一社会信用代码
- * @see https://www.wikidata.org/wiki/Property:P6795
- * @link https://regexper.com/#%2F%5B1-9ANY%5D%5B1-59%5D%5Cd%7B6%7D%5B%5CdA-Z%5D%7B8%7D%5B%5CdX%5D%5B%5CdA-HJ-NP-RTUW-Y%5D%2F
+ * @see {@link https://www.wikidata.org/wiki/Property:P6795}
+ * @see {@link https://regexper.com/#%2F%5B1-9ANY%5D%5B1-59%5D%5Cd%7B6%7D%5B%5CdA-Z%5D%7B8%7D%5B%5CdX%5D%5B%5CdA-HJ-NP-RTUW-Y%5D%2F}
  */
 export const USCC_PATTERN =
   // cSpell: disable-next-line

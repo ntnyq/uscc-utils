@@ -4,8 +4,8 @@ import type { ParseOptions, ParseResult } from './types'
 
 /**
  * parse uscc
- * @param code code to parse
- * @param options parse options
+ * @param code - code to parse
+ * @param options - parse options
  * @returns parsed result `ParseResult`
  *
  * @example
