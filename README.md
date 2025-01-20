@@ -10,15 +10,15 @@
 
 ## Install
 
-```bash
+```shell
 npm i uscc-utils
 ```
 
-```bash
+```shell
 yarn add uscc-utils
 ```
 
-```bash
+```shell
 pnpm add uscc-utils
 ```
 
