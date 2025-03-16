@@ -16,7 +16,11 @@ const UNKNOWN = 'unknown'
 describe('parseUSCC', () => {
   it('should return type match', () => {
     ;[...validCodes, ...invalidCodes].forEach(code => {
-      expect(Object.keys(parseUSCC(code))).toEqual(['isValid', 'category', 'type'])
+      expect(Object.keys(parseUSCC(code))).toEqual([
+        'isValid',
+        'category',
+        'type',
+      ])
     })
   })
 

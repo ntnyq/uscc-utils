@@ -3,7 +3,7 @@
  * @see {@link https://www.wikidata.org/wiki/Property:P6795}
  * @see {@link https://regexper.com/#%2F%5B1-9ANY%5D%5B1-59%5D%5Cd%7B6%7D%5B%5CdA-Z%5D%7B8%7D%5B%5CdX%5D%5B%5CdA-HJ-NP-RTUW-Y%5D%2F}
  */
-export const USCC_PATTERN =
+export const USCC_PATTERN: RegExp =
   // cSpell: disable-next-line
   /[1-9ANY][1-59]\d{6}[\dA-Z]{8}[\dX][\dA-HJ-NP-RTUW-Y]/
 

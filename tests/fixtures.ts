@@ -25,13 +25,13 @@ export const code5 = '91110108551385082Q'
  */
 export const code6 = '92141127MA0KD1Y64A'
 
-export const validCodes = [code1, code2, code3, code4, code5, code6]
+export const validCodes: string[] = [code1, code2, code3, code4, code5, code6]
 
-export const patternErrorCodes = ['', '123', 'FOOBARFOOBARFOOBAR']
+export const patternErrorCodes: string[] = ['', '123', 'FOOBARFOOBARFOOBAR']
 
 /**
  * checksum
  */
 export const checksumErrorCode = '91110108551385082F'
 
-export const invalidCodes = [...patternErrorCodes, checksumErrorCode]
+export const invalidCodes: string[] = [...patternErrorCodes, checksumErrorCode]

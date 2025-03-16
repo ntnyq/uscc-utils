@@ -3,13 +3,15 @@
  */
 export interface ParseResult {
   /**
-   * whether the USCC is valid
-   */
-  isValid: boolean
-  /**
    * category of the USCC
    */
   category: string
+
+  /**
+   * whether the USCC is valid
+   */
+  isValid: boolean
+
   /**
    * type of the USCC
    */
@@ -24,6 +26,7 @@ export interface ParseOptions {
    * placeholder for unknown category
    */
   unknownCategory?: string
+
   /**
    * placeholder for unknown type
    */

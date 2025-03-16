@@ -2,7 +2,7 @@
   "name": "uscc-utils",
   "type": "module",
   "version": "0.6.1",
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.6.3",
   "description": "Utils about unified social credit code | 统一社会信用代码工具方法",
   "keywords": [
     "parse",
@@ -49,7 +49,7 @@
     "build": "unbuild",
     "coverage": "vitest --coverage",
     "dev": "unbuild --stub",
-    "lint": "eslint .",
+    "lint": "eslint",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
     "release": "run-s release:check release:publish",
@@ -59,22 +59,21 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^3.12.3",
+    "@ntnyq/eslint-config": "^4.0.2",
     "@ntnyq/prettier-config": "^2.0.0",
     "@types/node": "^22.13.10",
     "@vitest/coverage-v8": "^3.0.8",
-    "bumpp": "^10.0.3",
+    "bumpp": "^10.1.0",
     "eslint": "^9.22.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.5.3",
-    "tsx": "^4.19.3",
     "typescript": "^5.8.2",
     "unbuild": "^3.5.0",
     "vitest": "^3.0.8"
   },
   "nano-staged": {
-    "*.{js,ts,cjs,mjs,json,md,yml,yaml}": "eslint --fix"
+    "*.{js,ts,cjs,mjs,md,yml,yaml,json}": "eslint --fix"
   }
 }

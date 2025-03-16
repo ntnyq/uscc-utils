@@ -14,7 +14,10 @@ import type { ParseOptions, ParseResult } from './types'
  * parseUSCC('91110108551385082Q') // { isValid: true, category: '工商', type: '企业' }
  * ```
  */
-export function parseUSCC(code: string, options: ParseOptions = {}): ParseResult {
+export function parseUSCC(
+  code: string,
+  options: ParseOptions = {},
+): ParseResult {
   const { unknownCategory = '', unknownType = '' } = options
   const isValid = validateUSCC(code)
 
