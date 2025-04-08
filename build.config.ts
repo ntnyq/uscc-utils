@@ -2,10 +2,9 @@ import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
   clean: true,
-  declaration: true,
+  declaration: 'node16',
   entries: ['src/index'],
   rollup: {
-    emitCJS: true,
     esbuild: {
       charset: 'utf8',
     },
