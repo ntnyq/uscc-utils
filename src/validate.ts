@@ -8,7 +8,6 @@ const USCC_LENGTH = 18
 /**
  * 统一社会信用代码 取模值
  */
-
 const USCC_MOD = 31
 
 /**
@@ -67,8 +66,12 @@ const USCC_WEIGHTS = [
  * ```
  */
 export function validateUSCC(code: string): boolean {
-  if (code.length !== USCC_LENGTH) return false
-  if (!USCC_PATTERN.test(code)) return false
+  if (code.length !== USCC_LENGTH) {
+    return false
+  }
+  if (!USCC_PATTERN.test(code)) {
+    return false
+  }
 
   const sum = code
     .split('')
