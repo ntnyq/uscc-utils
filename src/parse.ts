@@ -30,8 +30,8 @@ export function parseUSCC(
   }
 
   const matched = USCC_CATEGORY_MAP[code.charAt(0)]
-  const category = matched.category
-  const type = matched.map[code.charAt(1)] || unknownType
+  const category = matched?.category ?? unknownCategory
+  const type = matched?.map[code.charAt(1)] ?? unknownType
 
   return {
     isValid,
