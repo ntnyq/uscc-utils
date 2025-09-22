@@ -2,7 +2,7 @@
   "name": "uscc-utils",
   "type": "module",
   "version": "0.7.0",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.16.1",
   "description": "Utils about unified social credit code | 统一社会信用代码工具方法",
   "keywords": [
     "parse",
@@ -51,16 +51,16 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^5.4.2",
+    "@ntnyq/eslint-config": "^5.5.0",
     "@ntnyq/prettier-config": "^3.0.1",
-    "@types/node": "^24.3.1",
+    "@types/node": "^24.4.0",
     "bumpp": "^10.2.3",
     "eslint": "^9.35.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
-    "tsdown": "^0.14.2",
+    "tsdown": "^0.15.1",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
