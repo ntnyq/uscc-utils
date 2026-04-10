@@ -13,7 +13,7 @@ import {
 
 const UNKNOWN = 'unknown'
 
-describe('parseUSCC', () => {
+describe(parseUSCC, () => {
   it('should return type match', () => {
     ;[...validCodes, ...invalidCodes].forEach(code => {
       expect(Object.keys(parseUSCC(code))).toEqual([

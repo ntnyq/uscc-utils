@@ -20,6 +20,7 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
+      - run: pnpm run format:check
       - run: pnpm run lint
       - run: pnpm run typecheck
 
@@ -54,5 +55,4 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
-
       - run: npx jsr publish --dry-run

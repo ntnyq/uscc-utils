@@ -10,11 +10,14 @@ describe('typecheck', () => {
 
   it('should return type match', () => {
     expectTypeOf(validateUSCC).returns.toBeBoolean()
-    expectTypeOf(parseUSCC).returns.toMatchTypeOf<ParseResult>()
+    expectTypeOf(parseUSCC).returns.toExtend<ParseResult>()
   })
 
   it('should params type match', () => {
     expectTypeOf(validateUSCC).parameters.toEqualTypeOf<[string]>()
-    expectTypeOf(parseUSCC).parameters.toEqualTypeOf<[string, ParseOptions?]>()
+    expectTypeOf(parseUSCC).parameter(0).toEqualTypeOf<string>()
+    expectTypeOf(parseUSCC)
+      .parameter(1)
+      .toEqualTypeOf<ParseOptions | undefined>()
   })
 })

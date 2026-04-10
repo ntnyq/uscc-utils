@@ -51,6 +51,7 @@ const USCC_CHARS = [
  * 统一社会信用代码加权因子
  */
 const USCC_WEIGHTS = [
+  // oxlint-disable-next-line no-magic-numbers
   1, 3, 9, 27, 19, 26, 16, 17, 20, 29, 25, 13, 8, 24, 10, 30, 28,
 ] as const
 
@@ -73,8 +74,9 @@ export function validateUSCC(code: string): boolean {
     return false
   }
 
-  const sum = code
-    .split('')
+  // There are only digits and uppercase letters in USCC
+  // oxlint-disable-next-line typescript/no-misused-spread
+  const sum = [...code]
     .filter((_, idx) => idx < 17)
     .reduce(
       (acc, char, idx) => acc + USCC_CHARS.indexOf(char) * USCC_WEIGHTS[idx]!,
