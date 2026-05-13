@@ -11,3 +11,6 @@ lib-cov
 temp
 
 *.tsbuildinfo
+
+# pnpm
+**/.pnpm-store/**

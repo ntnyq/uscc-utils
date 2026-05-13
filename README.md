@@ -42,7 +42,53 @@ Check if the given code match the uscc pattern.
 Type definition:
 
 ```ts
-function validateUSCC(code: string): boolean
+interface ValidateOptions {
+  normalize?: boolean
+}
+
+function validateUSCC(code: string, options?: ValidateOptions): boolean
+```
+
+### explainUSCC
+
+Return detailed validation result.
+
+Type definition:
+
+```ts
+type USCCValidationErrorCode =
+  | 'INVALID_LENGTH'
+  | 'INVALID_PATTERN'
+  | 'INVALID_CHECKSUM'
+
+interface ValidateUSCCResult {
+  normalizedCode: string
+  isValid: boolean
+  errorCode?: USCCValidationErrorCode
+}
+
+function explainUSCC(
+  code: string,
+  options?: ValidateOptions,
+): ValidateUSCCResult
+```
+
+### splitUSCC
+
+Split valid uscc to structural parts.
+
+Type definition:
+
+```ts
+interface USCCParts {
+  registrationAuthorityCode: string
+  entityTypeCode: string
+  regionCode: string
+  organizationCode: string
+  checkChar: string
+}
+
+function splitUSCC(code: string, options?: ValidateOptions): USCCParts | null
 ```
 
 ### parseUSCC
@@ -55,6 +101,7 @@ Type definition:
 interface ParseOptions {
   unknownCategory?: string
   unknownType?: string
+  normalize?: boolean
 }
 
 interface ParseResult {

@@ -1,12 +1,12 @@
 import { USCC_CATEGORY_MAP } from './constants'
 import type { ParseOptions, ParseResult } from './types'
-import { validateUSCC } from './validate'
+import { explainUSCC } from './validate'
 
 /**
- * parse uscc
- * @param code - code to parse
- * @param options - parse options
- * @returns parsed result `ParseResult`
+ * 解析统一社会信用代码
+ * @param code - 待解析的统一社会信用代码
+ * @param options - 解析选项
+ * @returns 解析结果 `ParseResult`
  *
  * @example
  * ```
@@ -18,8 +18,8 @@ export function parseUSCC(
   code: string,
   options: ParseOptions = {},
 ): ParseResult {
-  const { unknownCategory = '', unknownType = '' } = options
-  const isValid = validateUSCC(code)
+  const { unknownCategory = '', unknownType = '', normalize = false } = options
+  const { isValid, normalizedCode } = explainUSCC(code, { normalize })
 
   if (!isValid) {
     return {
@@ -29,9 +29,9 @@ export function parseUSCC(
     }
   }
 
-  const matched = USCC_CATEGORY_MAP[code.charAt(0)]
+  const matched = USCC_CATEGORY_MAP[normalizedCode.charAt(0)]
   const category = matched?.category ?? unknownCategory
-  const type = matched?.map[code.charAt(1)] ?? unknownType
+  const type = matched?.map[normalizedCode.charAt(1)] ?? unknownType
 
   return {
     isValid,

@@ -16,7 +16,7 @@ const UNKNOWN = 'unknown'
 describe(parseUSCC, () => {
   it('should return type match', () => {
     ;[...validCodes, ...invalidCodes].forEach(code => {
-      expect(Object.keys(parseUSCC(code))).toEqual([
+      expect(Object.keys(parseUSCC(code))).toStrictEqual([
         'isValid',
         'category',
         'type',
@@ -86,5 +86,22 @@ describe(parseUSCC, () => {
         "type": "企业",
       }
     `)
+  })
+
+  it('should support normalization by option', () => {
+    expect(parseUSCC('  91370000728611939a  ')).toStrictEqual({
+      isValid: false,
+      category: '',
+      type: '',
+    })
+    expect(
+      parseUSCC('  91370000728611939a  ', {
+        normalize: true,
+      }),
+    ).toStrictEqual({
+      isValid: true,
+      category: '工商',
+      type: '企业',
+    })
   })
 })
