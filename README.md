@@ -57,9 +57,7 @@ Type definition:
 
 ```ts
 type USCCValidationErrorCode =
-  | 'INVALID_LENGTH'
-  | 'INVALID_PATTERN'
-  | 'INVALID_CHECKSUM'
+  'INVALID_LENGTH' | 'INVALID_PATTERN' | 'INVALID_CHECKSUM'
 
 interface ValidateUSCCResult {
   normalizedCode: string
