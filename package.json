@@ -61,7 +61,7 @@
     "npm-run-all2": "^9.0.2",
     "oxfmt": "^0.56.0",
     "oxlint": "^1.71.0",
-    "oxlint-tsgolint": "^0.23.0",
+    "oxlint-tsgolint": "^7.0.2001",
     "tsdown": "^0.22.3",
     "typescript": "^7.0.2",
     "vitest": "^4.1.9"
